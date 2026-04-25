@@ -517,15 +517,22 @@ header{
 // Get it from: Firebase Console → Project Settings → Your apps → Web
 // The admin can also set it via the UI without editing code.
 
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
 const FIREBASE_CONFIG = {
-  apiKey:            "PASTE_YOUR_API_KEY",
-  authDomain:        "PASTE_YOUR_AUTH_DOMAIN",
+  apiKey:            "AIzaSyAArnjm-AWYvd7V_PP_ATkQPsiU1WXmvDQ",
+  authDomain:        "create-dd114.firebaseapp.com",
   databaseURL:       "PASTE_YOUR_DATABASE_URL",
-  projectId:         "PASTE_YOUR_PROJECT_ID",
-  storageBucket:     "PASTE_YOUR_STORAGE_BUCKET",
-  messagingSenderId: "PASTE_YOUR_SENDER_ID",
-  appId:             "PASTE_YOUR_APP_ID"
+  projectId:         "create-dd114",
+  storageBucket:     "create-dd114.firebasestorage.app",
+  messagingSenderId: "988360315564",
+  appId:             "1:988360315564:web:e80cc5ad68a4995c000509"
 };
+
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 // ────────────────────────────────────────────────────────────────
 
 // ── DEFAULTS (used the very first time / offline fallback) ───────
